@@ -1,0 +1,23 @@
+{
+  "atom": {
+    "rewriteTsconfig": false
+  },
+  "buildOnSave": false,
+  "compileOnSave": true,
+  "compilerOptions": {
+    "declaration": true,
+    "inlineSourceMap": true,
+    "lib": [
+      "es2015"
+    ],
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "outDir": "dist",
+    "strictNullChecks": true,
+    "target": "ES5"
+  },
+  "include": [
+    "*.ts"
+  ]
+}
+

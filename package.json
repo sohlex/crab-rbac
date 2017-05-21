@@ -1,0 +1,29 @@
+{
+  "name": "h-rbac",
+  "version": "0.0.1",
+  "description": "A Hierarchical Role Based Access library. Role, not Rule!",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "compile-watch": "tsc --watch",
+    "compile": "tsc",
+    "test": "npm run compile && node dist/*-test.js"
+  },
+  "author": "Alessio \"LeX\" Calafiore <alessio.calafiore@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "role",
+    "based",
+    "access",
+    "permission",
+    "RBAC",
+    "HRBAC",
+    "H-RBAC"
+  ],
+  "dependencies": {
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {
+    "tape": "^4.6.3"
+  }
+}
