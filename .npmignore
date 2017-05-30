@@ -1,0 +1,7 @@
+/node_modules
+.vscode/*
+.gitignore
+index-test.ts
+index.ts
+*.json
+.DS_Store

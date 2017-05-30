@@ -1,5 +1,5 @@
 {
-  "name": "h-rbac",
+  "name": "crab-rbac",
   "version": "0.0.1",
   "description": "A Hierarchical Role Based Access library. Role, not Rule!",
   "main": "./dist/index.js",
@@ -7,7 +7,7 @@
   "scripts": {
     "compile-watch": "tsc --watch",
     "compile": "tsc",
-    "test": "npm run compile && node dist/*-test.js"
+    "test": "ts-node index-test.ts"
   },
   "author": "Alessio \"LeX\" Calafiore <alessio.calafiore@gmail.com>",
   "license": "MIT",
@@ -18,7 +18,8 @@
     "permission",
     "RBAC",
     "HRBAC",
-    "H-RBAC"
+    "H-RBAC",
+    "CRAB"
   ],
   "dependencies": {
     "lodash": "^4.17.4"
