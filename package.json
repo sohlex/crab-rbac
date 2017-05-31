@@ -9,6 +9,10 @@
     "compile": "tsc",
     "test": "ts-node index-test.ts"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sohlex/crab-rbac"
+  },
   "author": "Alessio \"LeX\" Calafiore <alessio.calafiore@gmail.com>",
   "license": "MIT",
   "keywords": [
