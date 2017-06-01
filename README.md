@@ -22,22 +22,22 @@ For instance:
   const rolesData = [
     {
       name: 'DISABLED',
-      permissions: [],
+      capabilities: [],
       inherits: []
     },
     {
       name: 'VIEWER',
-      permissions: ['post:read', 'comment:read'],
+      capabilities: ['post:read', 'comment:read'],
       inherits: []
     },
     {
       name: 'EDITOR',
-      permissions: ['comment:read', 'post:edit', 'comment:edit'],
+      capabilities: ['comment:read', 'post:edit', 'comment:edit'],
       inherits: ['VIEWER']
     },
     {
       name: 'USER_MANAGER',
-      permissions: ['user:read', 'user:edit'],
+      capabilities: ['user:read', 'user:edit'],
       inherits: []
     }
   ]
@@ -46,11 +46,11 @@ For instance:
 ```
 
 ## API
-**can(permission: string, ...roles: string[]): boolean**
-Returns a boolean that states if the required permission/operation can be performed by the role(s) supplied in the arguments.
+**can(capability: string, ...roles: string[]): boolean**
+Returns a boolean that states if the required capability can be performed by the role(s) supplied in the arguments.
 
 **capabilitiesOf(role: string): string[]**
-Returns all the capabilities/permissions (also the inherited ones) that a role can perform.
+Returns all the capabilities (also the inherited ones) that a role can perform.
 
 **listRoles(): string[]**
 Returns all the role names loaded by the rbac library.

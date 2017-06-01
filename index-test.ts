@@ -1,7 +1,3 @@
-// @ts-check
-// @TODO: should we try a global installation of ts-node? and execue only `ts-node tests`?
-// we should also say to typescript to not compile files that end with -test.ts...
-// const test = require('tape')
 import * as test from 'tape'
 import {rbac} from './index'
 
@@ -14,22 +10,22 @@ test('Init the rbac system', assert => {
   const rolesData = [
     {
       name: 'DISABLED',
-      permissions: [],
+      capabilities: [],
       inherits: []
     },
     {
       name: 'VIEWER',
-      permissions: ['post:read', 'comment:read'],
+      capabilities: ['post:read', 'comment:read'],
       inherits: []
     },
     {
       name: 'EDITOR',
-      permissions: ['comment:read', 'post:edit', 'comment:edit'],
+      capabilities: ['comment:read', 'post:edit', 'comment:edit'],
       inherits: ['VIEWER']
     },
     {
       name: 'USER_MANAGER',
-      permissions: ['user:read', 'user:edit'],
+      capabilities: ['user:read', 'user:edit'],
       inherits: []
     }
   ]
