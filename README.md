@@ -47,15 +47,19 @@ For instance:
 
 ## API
 **can(capability: string, ...roles: string[]): boolean**
+
 Returns a boolean that states if the required capability can be performed by the role(s) supplied in the arguments.
 
 **capabilitiesOf(role: string): string[]**
+
 Returns all the capabilities (also the inherited ones) that a role can perform.
 
 **listRoles(): string[]**
+
 Returns all the role names loaded by the rbac library.
 
 **init(roles: Role[]): boolean**
+
 Initializes the rbac library with the list of roles provided as argument.
 
 **isInitialized(): boolean**
