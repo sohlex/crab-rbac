@@ -1,6 +1,6 @@
 {
   "name": "crab-rbac",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Hierarchical Role Based Access library. Role, not Rule!",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
