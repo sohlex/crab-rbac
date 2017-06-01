@@ -14,6 +14,53 @@ or import it if you are using TypeScript
 
 `import {rbac} from 'crab-rbac'`
 
+Then to initialize rbac, just build an array where every single object contains the name of the role, relative permissions and if it inherits all the permissions from a previously defined role.
+
+For instance:
+
+```
+  const rolesData = [
+    {
+      name: 'DISABLED',
+      permissions: [],
+      inherits: []
+    },
+    {
+      name: 'VIEWER',
+      permissions: ['post:read', 'comment:read'],
+      inherits: []
+    },
+    {
+      name: 'EDITOR',
+      permissions: ['comment:read', 'post:edit', 'comment:edit'],
+      inherits: ['VIEWER']
+    },
+    {
+      name: 'USER_MANAGER',
+      permissions: ['user:read', 'user:edit'],
+      inherits: []
+    }
+  ]
+
+  rbac.init(rolesData)
+```
+
+## API
+**can(permission: string, ...roles: string[]): boolean**
+Returns a boolean that states if the required permission/operation can be performed by the role(s) supplied in the arguments.
+
+**capabilitiesOf(role: string): string[]**
+Returns all the capabilities/permissions (also the inherited ones) that a role can perform.
+
+**listRoles(): string[]**
+Returns all the role names loaded by the rbac library.
+
+**init(roles: Role[]): boolean**
+Initializes the rbac library with the list of roles provided as argument.
+
+**isInitialized(): boolean**
+Tells if the library has been initialized
+
 ## Testing
 To run the tests using
 
